@@ -1,0 +1,276 @@
+[ansen@ansens-freebsd ~/assignment1]$ sudo dtrace -s ls.d
+dtrace: script 'ls.d' matched 2284 probes
+CPU     ID                    FUNCTION:NAME
+  0  65648                    execve:return 		 = -1
+
+  0  66465                       mmap:entry ls(0, 135168, 3, 4098, -1, 0)
+  0  66466                      mmap:return 		 = 2269184
+
+  0  65677                   mprotect:entry ls(34361995264, 4096, 1, 0, 0, 0)
+  0  65678                  mprotect:return 		 = 0
+
+  0  66017                  issetugid:entry ls(0, 0, 0, 0, 0, 0)
+  0  66018                 issetugid:return 		 = 0
+
+  0  66657               sigfastblock:entry ls(1, 34362004688, 0, 0, 0, 0)
+  0  66658              sigfastblock:return 		 = 0
+
+  0  65539                       open:entry ls(34361890113, 1048576, 35752, 0, 0, 0)
+  0  65540                      open:return 		 = 3
+
+  0  66613                      fstat:entry ls(3, 140737488346616, 0, 0, 0, 0)
+  0  66614                     fstat:return 		 = 0
+
+  0  65535                       read:entry ls(3, 34362023944, 47, 0, 0, 0)
+  0  65536                      read:return 		 = 47
+
+  0  65541                      close:entry ls(3, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  65539                       open:entry ls(140737488345499, 1179652, 117, 0, 0, 0)
+  0  65540                      open:return 		 = 3
+
+  0  65713                      fcntl:entry ls(3, 21, 0, 0, 0, 0)
+  0  65714                     fcntl:return 		 = 0
+
+  0  66619              getdirentries:entry ls(3, 34362028040, 4096, 34362011696, 0, 0)
+  0  66620             getdirentries:return 		 = 104
+
+  0  65539                       open:entry ls(140737488344464, 1048576, 117, 0, 0, 0)
+  0  65540                      open:return 		 = 4
+
+  0  66613                      fstat:entry ls(4, 140737488343160, 0, 0, 0, 0)
+  0  66614                     fstat:return 		 = 0
+
+  0  65535                       read:entry ls(4, 34362024136, 38, 0, 0, 0)
+  0  65536                      read:return 		 = 38
+
+  0  65541                      close:entry ls(4, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  66619              getdirentries:entry ls(3, 34362028040, 4096, 34362011696, 0, 0)
+  0  66620             getdirentries:return 		 = 0
+
+  0  65541                      close:entry ls(3, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  65539                       open:entry ls(34361891260, 1048576, 4754, 0, 0, 0)
+  0  65540                      open:return 		 = 3
+
+  0  65535                       read:entry ls(3, 34362004360, 128, 0, 0, 0)
+  0  65536                      read:return 		 = 128
+
+  0  66613                      fstat:entry ls(3, 140737488342744, 0, 0, 0, 0)
+  0  66614                     fstat:return 		 = 0
+
+  0  66461                      pread:entry ls(3, 34362016520, 220, 128, 0, 0)
+  0  66462                     pread:return 		 = 220
+
+  0  65541                      close:entry ls(3, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  65539                       open:entry ls(34362036232, 3145728, 27648, 0, 0, 0)
+  0  65540                      open:return 		 = 3
+
+  0  66613                      fstat:entry ls(3, 140737488344272, 0, 0, 0, 0)
+  0  66614                     fstat:return 		 = 0
+
+  0  66465                       mmap:entry ls(0, 4096, 1, 262146, 3, 0)
+  0  66466                      mmap:return 		 = 2404352
+
+  0  66465                       mmap:entry ls(0, 98304, 0, 8192, -1, 0)
+  0  66466                      mmap:return 		 = 2408448
+
+  0  66465                       mmap:entry ls(34362146816, 32768, 1, 393234, 3, 0)
+  0  66466                      mmap:return 		 = 2408448
+
+  0  66465                       mmap:entry ls(34362179584, 49152, 5, 393234, 3, 28672)
+  0  66466                      mmap:return 		 = 2441216
+
+  0  66465                       mmap:entry ls(34362228736, 4096, 3, 262162, 3, 73728)
+  0  66466                      mmap:return 		 = 2490368
+
+  0  66465                       mmap:entry ls(34362232832, 4096, 3, 262162, 3, 73728)
+  0  66466                      mmap:return 		 = 2494464
+
+  0  66465                       mmap:entry ls(34362236928, 8192, 3, 4114, -1, 0)
+  0  66466                      mmap:return 		 = 2498560
+
+  0  65675                     munmap:entry ls(34362142720, 4096, 0, 0, 0, 0)
+  0  65676                    munmap:return 		 = 0
+
+  0  65541                      close:entry ls(3, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  65539                       open:entry ls(34362036232, 3145728, 0, 0, 0, 0)
+  0  65540                      open:return 		 = 3
+
+  0  66613                      fstat:entry ls(3, 140737488344272, 0, 0, 0, 0)
+  0  66614                     fstat:return 		 = 0
+
+  0  66465                       mmap:entry ls(0, 4096, 1, 262146, 3, 0)
+  0  66466                      mmap:return 		 = 2404352
+
+  0  66465                       mmap:entry ls(0, 475136, 0, 8192, -1, 0)
+  0  66466                      mmap:return 		 = 2506752
+
+  0  66465                       mmap:entry ls(34362245120, 192512, 1, 393234, 3, 0)
+  0  66466                      mmap:return 		 = 2506752
+
+  0  66465                       mmap:entry ls(34362437632, 253952, 5, 393234, 3, 188416)
+  0  66466                      mmap:return 		 = 2699264
+
+  0  66465                       mmap:entry ls(34362691584, 16384, 3, 262162, 3, 438272)
+  0  66466                      mmap:return 		 = 2953216
+
+  0  66465                       mmap:entry ls(34362707968, 8192, 3, 262162, 3, 450560)
+  0  66466                      mmap:return 		 = 2969600
+
+  0  66465                       mmap:entry ls(34362716160, 4096, 3, 4114, -1, 0)
+  0  66466                      mmap:return 		 = 2977792
+
+  0  65675                     munmap:entry ls(34362142720, 4096, 0, 0, 0, 0)
+  0  65676                    munmap:return 		 = 0
+
+  0  65541                      close:entry ls(3, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  65539                       open:entry ls(34362036232, 3145728, 17920, 0, 0, 0)
+  0  65540                      open:return 		 = 3
+
+  0  66613                      fstat:entry ls(3, 140737488344272, 0, 0, 0, 0)
+  0  66614                     fstat:return 		 = 0
+
+  0  66465                       mmap:entry ls(0, 4096, 1, 262146, 3, 0)
+  0  66466                      mmap:return 		 = 2404352
+
+  0  66465                       mmap:entry ls(0, 4263936, 0, 8192, -1, 0)
+  0  66466                      mmap:return 		 = 2981888
+
+  0  66465                       mmap:entry ls(34362720256, 540672, 1, 393234, 3, 0)
+  0  66466                      mmap:return 		 = 2981888
+
+  0  66465                       mmap:entry ls(34363260928, 1384448, 5, 393234, 3, 536576)
+  0  66466                      mmap:return 		 = 3522560
+
+  0  66465                       mmap:entry ls(34364645376, 40960, 3, 262162, 3, 1916928)
+  0  66466                      mmap:return 		 = 4907008
+
+  0  66465                       mmap:entry ls(34364686336, 28672, 3, 262162, 3, 1953792)
+  0  66466                      mmap:return 		 = 4947968
+
+  0  66465                       mmap:entry ls(34364715008, 2269184, 3, 4114, -1, 0)
+  0  66466                      mmap:return 		 = 4976640
+
+  0  65675                     munmap:entry ls(34362142720, 4096, 0, 0, 0, 0)
+  0  65676                    munmap:return 		 = 0
+
+  0  65541                      close:entry ls(3, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  65677                   mprotect:entry ls(34362228736, 4096, 1, 0, 0, 0)
+  0  65678                  mprotect:return 		 = 0
+
+  0  65677                   mprotect:entry ls(34362691584, 16384, 1, 0, 0, 0)
+  0  65678                  mprotect:return 		 = 0
+
+  0  65677                   mprotect:entry ls(34364645376, 40960, 1, 0, 0, 0)
+  0  65678                  mprotect:return 		 = 0
+
+  0  65677                   mprotect:entry ls(34364645376, 40960, 3, 0, 0, 0)
+  0  65678                  mprotect:return 		 = 0
+
+  0  65677                   mprotect:entry ls(34364645376, 40960, 1, 0, 0, 0)
+  0  65678                  mprotect:return 		 = 0
+
+  0  65645                   readlink:entry ls(34363005054, 140737488344592, 1024, 0, 0, 0)
+  0  65646                  readlink:return 		 = -1
+
+  0  66017                  issetugid:entry ls(0, 0, 0, 0, 0, 0)
+  0  66018                 issetugid:return 		 = 0
+
+  0  65933                   __sysctl:entry ls(140737488337832, 2, 140737488337828, 140737488337816, 0, 0)
+  0  65934                  __sysctl:return 		 = 0
+
+  0  66465                       mmap:entry ls(0, 2097152, 3, 352325634, -1, 0)
+  0  66466                      mmap:return 		 = 8388608
+
+  0  66465                       mmap:entry ls(0, 2097152, 3, 201330690, -1, 0)
+  0  66466                      mmap:return 		 = 10485760
+
+  0  66465                       mmap:entry ls(0, 4194304, 3, 352325634, -1, 0)
+  0  66466                      mmap:return 		 = 12582912
+
+  0  65677                   mprotect:entry ls(2134016, 4096, 1, 0, 0, 0)
+  0  65678                  mprotect:return 		 = 0
+
+  0  65539                       open:entry ls(34370260992, 0, 19503, 0, 0, 0)
+  0  65540                      open:return 		 = 3
+
+  0  66613                      fstat:entry ls(3, 140737488345696, 0, 0, 0, 0)
+  0  66614                     fstat:return 		 = 0
+
+  0  66465                       mmap:entry ls(0, 51056, 1, 2, 3, 0)
+  0  66466                      mmap:return 		 = 7245824
+
+  0  65541                      close:entry ls(3, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  65675                     munmap:entry ls(34366984192, 51056, 0, 0, 0, 0)
+  0  65676                    munmap:return 		 = 0
+
+  0  65637                      ioctl:entry ls(1, 1076655123, 140737488348048, 0, 0, 0)
+  0  65638                     ioctl:return 		 = 0
+
+  0  65637                      ioctl:entry ls(1, 1074295912, 140737488349680, 0, 0, 0)
+  0  65638                     ioctl:return 		 = 0
+
+  0  65577                     getuid:entry ls(0, 0, 0, 0, 0, 0)
+  0  65578                    getuid:return 		 = 1001
+
+  0  66615                    fstatat:entry ls(-100, 34370445624, 140737488347664, 0, 0, 0)
+  0  66616                   fstatat:return 		 = 0
+
+  0  65539                       open:entry ls(34362982622, 1048576, 0, 0, 0, 0)
+  0  65540                      open:return 		 = 3
+
+  0  65555                     fchdir:entry ls(3, 0, 0, 0, 0, 0)
+  0  65556                    fchdir:return 		 = 0
+
+  0  65539                       open:entry ls(34362982622, 1048576, 0, 0, 0, 0)
+  0  65540                      open:return 		 = 4
+
+  0  65539                       open:entry ls(34370424832, 1179652, 0, 0, 0, 0)
+  0  65540                      open:return 		 = 5
+
+  0  65713                      fcntl:entry ls(5, 21, 0, 0, 0, 0)
+  0  65714                     fcntl:return 		 = 0
+
+  0  66619              getdirentries:entry ls(5, 34370478080, 4096, 34370465832, 0, 0)
+  0  66620             getdirentries:return 		 = 1024
+
+  0  66619              getdirentries:entry ls(5, 34370478080, 4096, 34370465832, 0, 0)
+  0  66620             getdirentries:return 		 = 0
+
+  0  65541                      close:entry ls(5, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  65555                     fchdir:entry ls(4, 0, 0, 0, 0, 0)
+  0  65556                    fchdir:return 		 = 0
+
+  0  65541                      close:entry ls(4, 0, 0, 0, 0, 0)
+  0  65542                     close:return 		 = 0
+
+  0  66613                      fstat:entry ls(1, 140737488345888, 0, 0, 0, 0)
+  0  66614                     fstat:return 		 = 0
+
+  0  65637                      ioctl:entry ls(1, 1076655123, 140737488345808, 0, 0, 0)
+  0  65638                     ioctl:return 		 = 0
+
+  0  65537                      write:entry ls(1, 34370478080, 21, 0, 0, 0)
+  0  65538                     write:return 		 = 21
+
+  0  65531                       exit:entry ls(0, 0, 0, 0, 0, 0)
+
+
+
