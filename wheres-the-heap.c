@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 void wait_for_input(void);
-
+  
 int
 main(int argc, char *argv[])
 {
